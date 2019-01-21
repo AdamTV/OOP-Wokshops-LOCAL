@@ -1,0 +1,24 @@
+REFLECTION SECTION (I WILL WORK ON POINT FORM)
+I have learnt from completing this workshop that C++ is a beautiful program-
+ming language. The purpose of namespaces are for scope resolution and save us
+from using the scope resolution operator every time we want to call a
+function from an included module. They are also used to group our code by
+logic and prevent name collisions when using multiple libraries. Header files
+allow us to include definitions of functions and variables that are contained
+in the module they are a part of. This is just enough information that the
+compiler needs to validate the function. They are important because they
+allow us to share information between modules without having to recompile
+said information. On big projects this probably improves efficiency of the
+program. Header files should not be compiled because they contain just enough
+information for the compiler to validate functions you will be using and the
+definitions they include already exist in the corresponding .cpp file.
+Including .cpp files in other files would compile the same file twice and
+that takes up twice as much memory when you don't need to. The purpose of
+header files is to negate the need to include your .cpp files in other .cpp
+files.
+
+QUIZ 1 REFLECTION
+- The answer I got wrong was describing shadowing in respect to scope.
+- I said it occurs when a pre-defined variable gets defined again within the
+same block of code
+- The correct answer is the inner block of code, I must respect the scope!
