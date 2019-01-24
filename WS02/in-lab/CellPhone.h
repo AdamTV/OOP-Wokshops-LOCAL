@@ -1,14 +1,23 @@
-// TODO: header safeguards
+// Workshop 2
+// Name: ADAM STINZIANI
+// Student #: 124521188
+// Course: OOP244 Winter 2019
+// File: CellPhone.h
 
+// TODO: header safeguards
+#ifndef SICT_CELLPHONE_H
+#define SICT_CELLPHONE_H
+
+#define mMODEL 31
 
 // TODO: sict namespace
 namespace sict {
-	struct CellPhone {
-		char m_model[31];
+	class CellPhone {
+	public:
+		char m_model[mMODEL];
 		double m_price;
 	};
-
-	void display(const CellPhone & phone);
+		void display(const CellPhone & phone);
 }
 
 
@@ -17,3 +26,4 @@ namespace sict {
 // TODO: declare the function display(...),
 //         also in the sict namespace
 
+#endif // !SICT_CELLPHONE_H
