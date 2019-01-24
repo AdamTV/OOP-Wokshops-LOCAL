@@ -1,4 +1,4 @@
-Script started on Wed 16 Jan 2019 04:55:51 PM EST
+Script started on Sun 20 Jan 2019 11:50:11 PM EST
 [38;5;9mBegin Testing the Program!
 --------------------------[0m
 
@@ -41,4 +41,4 @@ Thanks for using SeneGraph
 [38;5;9m------------------------
 End Testing the Program![0m
 
-Script done on Wed 16 Jan 2019 04:56:08 PM EST
+Script done on Sun 20 Jan 2019 11:50:48 PM EST
