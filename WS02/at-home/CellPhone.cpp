@@ -17,13 +17,19 @@ namespace sict {
 				" costs $" << phone.m_price << "!" << endl;
 	}
 	void display(const CellPhone phone[], int nPhones) {
-		cout << "------------------------------" << endl
+		double cheap = 100000;
+			cout << "------------------------------" << endl
 			<< "Phones available at the mall :" << endl
 			<< "------------------------------" << endl;
 		for (int i = 0; i < nPhones; i++) {
-			cout << i << ".";
+			cout << i << ". ";
 			sict::display(phone[i]);
+			if (phone[i].m_price < cheap)
+				cheap = phone[i].m_price;
 		}
+		cout << "------------------------------" << endl
+			 << " The cheapest phone costs $" << cheap
+			 << "------------------------------" << endl;
 	}
 }
 
