@@ -16,16 +16,16 @@ namespace sict {
 		cout << "Phone " << phone.m_model <<
 				" costs $" << phone.m_price << "!" << endl;
 	}
-	void display(const CellPhone phone[i], int count) {
+	void display(const CellPhone phone[], int count) {
 		double cheap = 100000;
 			cout << "------------------------------" << endl
 			<< "Phones available at the mall :" << endl
 			<< "------------------------------" << endl;
 		for (int i = 0; i < count; i++) {
 			cout << i << ". ";
-		//	sict::display(phone[i]);
-			//if (phone[i].m_price < cheap)
-				//cheap = phone[i].m_price;
+			sict::display(phone[i]);
+			if (phone[i].m_price < cheap)
+			cheap = phone[i].m_price;
 		}
 		cout << "------------------------------" << endl
 			 << " The cheapest phone costs $" << cheap

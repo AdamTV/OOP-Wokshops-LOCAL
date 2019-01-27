@@ -18,7 +18,7 @@ namespace sict {
 		double m_price;
 	};
 		void display(const CellPhone & phone);
-		void display(const CellPhone & phone, int nPhones);
+		void display(const CellPhone phone[], int count);
 }
 
 

@@ -1,3 +1,9 @@
+// Workshop 2
+// Name: ADAM STINZIANI
+// Student #: 124521188
+// Course: OOP244 Winter 2019
+// File: w02_at_home.cpp
+
 // Workshop 2 - Dynamic Memory
 // Version 1.0
 // Date: 31/08/2018
@@ -47,18 +53,19 @@ int main()
 	cout << "------------------------------" << endl << endl;
 
 	// expand the array of Phones by 1 element
-	/*CellPhone* temp = nullptr;
+	CellPhone* temp = nullptr;
 	temp = new CellPhone[count + 1];
 	for (int i = 0; i < count; i++) {
 		temp[i] = pPhones[i];
 	}
 	delete[] pPhones;
 	pPhones = nullptr;
-	pPhones = temp;*/
+	*pPhones = *temp;
 		// TODO: allocate dynamic memory for count + 1 Phones
 		// TODO: copy elements from original array into this newly allocated array
 		// TODO: deallocate the dynamic memory for the original array
 		// TODO: copy the address of the newly allocated array into pPhones pointer
+
 		// add the new Phone
 	cout << "==========\n"
 	     << "Input data\n"
@@ -74,8 +81,8 @@ int main()
 	cout << endl;
 
 	// TODO: deallocate the dynamic memory here
-	//delete[] temp;
-	//temp = nullptr;
+	delete[] temp;
+	temp = nullptr;
 	return 0;
 }
 
