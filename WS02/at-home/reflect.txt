@@ -1,0 +1,23 @@
+REFLECTION
+- I learnt the value of thoroughness
+- I had properly implemented the overloaded display function (I think) but
+forgot to change the declaration in the header file which took me an hour to find
+- This workshop is titled Dynamic Memory however I have learnt more about
+overloaded functions and the value of thoroughness.
+- We allocate new dynamic memory for entire array when increasing size because
+dynamic memory is allocated contiguously and it makes logical sense to have all
+elements of an object stored contiguously.
+- We don't need to use the delete operator on the model of a structure because
+the model of the CellPhone structure is stored in a header file and does not get
+compiled in the first place. Memory for the array of cellphones is allocated
+dynamically according to how many cellphones there are. This is done to save
+memory.
+- The compiler knows which display function to call based on the arguments you
+specify in your call to the function, and it's definitions and prototypes of
+that function in both the header file and .cpp file! I learnt this the hard way.
+
+QUIZ REFLECTION
+-The question I got wrong was the purpose of the const qualifier after a
+function declaration
+- The purpose of the const qualifier is to set the function as a query which is
+only able to read data members it receives.  
