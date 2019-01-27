@@ -16,13 +16,13 @@ namespace sict {
 		cout << "Phone " << phone.m_model <<
 				" costs $" << phone.m_price << "!" << endl;
 	}
-	void display(const CellPhone & phone, int nPhones) {
+	void display(const CellPhone phone[], int nPhones) {
 		cout << "------------------------------" << endl
 			<< "Phones available at the mall :" << endl
 			<< "------------------------------" << endl;
 		for (int i = 0; i < nPhones; i++) {
 			cout << i << ".";
-			sict::display(phone);
+			sict::display(phone[i]);
 		}
 	}
 }

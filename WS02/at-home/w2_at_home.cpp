@@ -5,6 +5,10 @@
 
 // TODO: include headers
 
+#define NUM_PHONES 20
+#include <iostream>
+#include "CellPhone.h"
+
 using namespace std;
 using namespace sict;
 
@@ -14,41 +18,49 @@ int main()
 {
 	int count = 0;
 	// TODO: declare the pPhones pointer here (don't forget to initialize it)
-
+	CellPhone* pPhones = nullptr;
 
 	cout << "==========" << endl
-	     << "Input data" << endl
-	     << "==========" << endl
-	     << "Enter the number of phones: ";
+		<< "Input data" << endl
+		<< "==========" << endl
+		<< "Enter the number of phones: ";
 	cin >> count;
 	cin.ignore();
 
 	if (count < 1) return 1;
 
 	// TODO: allocate dynamic memory here for the pPhones pointer
-
+	pPhones = new CellPhone[NUM_PHONES];
 
 	for (int i = 0; i < count; ++i) {
 		cout << "Phone #" << i + 1 << ": " << endl;
 		// TODO: add code to accept user input for Phone i
-
+		read(pPhones[i]);
 	}
 	cout << "==========" << endl << endl;
 
 	// testing that "display(...)" works
 	cout << "------------------------------" << endl
-	     << "The 1st phone entered is" << endl
-	     << "------------------------------" << endl;
+		<< "The 1st phone entered is" << endl
+		<< "------------------------------" << endl;
 	sict::display(pPhones[0]);
 	cout << "------------------------------" << endl << endl;
 
 	// expand the array of Phones by 1 element
-	{
+	CellPhone* temp = nullptr;
+	temp = new CellPhone[count + 1];
+	for (int i = 0; i < count; i++) {
+		temp[i] = pPhones[i];
+	}
+	delete[] pPhones;
+	pPhones = nullptr;
+	*pPhones = *temp;
+
 		// TODO: allocate dynamic memory for count + 1 Phones
 		// TODO: copy elements from original array into this newly allocated array
 		// TODO: deallocate the dynamic memory for the original array
 		// TODO: copy the address of the newly allocated array into pPhones pointer
-	}
+	
 
 	// add the new Phone
 	cout << "==========\n"
@@ -65,7 +77,8 @@ int main()
 	cout << endl;
 
 	// TODO: deallocate the dynamic memory here
-
+	delete[] temp;
+	temp = nullptr;
 	return 0;
 }
 
