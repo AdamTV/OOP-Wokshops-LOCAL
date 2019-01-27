@@ -22,13 +22,13 @@ namespace sict {
 			<< "Phones available at the mall :" << endl
 			<< "------------------------------" << endl;
 		for (int i = 0; i < count; i++) {
-			cout << i << ". ";
+			cout << i + 1 << ". ";
 			sict::display(phone[i]);
 			if (phone[i].m_price < cheap)
 			cheap = phone[i].m_price;
 		}
 		cout << "------------------------------" << endl
-			 << " The cheapest phone costs $" << cheap
+			 << " The cheapest phone costs $" << cheap << endl
 			 << "------------------------------" << endl;
 	}
 }

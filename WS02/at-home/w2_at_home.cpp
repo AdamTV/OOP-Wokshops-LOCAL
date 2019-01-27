@@ -60,7 +60,7 @@ int main()
 	}
 	delete[] pPhones;
 	pPhones = nullptr;
-	*pPhones = *temp;
+	pPhones = temp;
 		// TODO: allocate dynamic memory for count + 1 Phones
 		// TODO: copy elements from original array into this newly allocated array
 		// TODO: deallocate the dynamic memory for the original array
@@ -72,7 +72,7 @@ int main()
 	     << "==========\n"
 	     << "Phone #" << count + 1 << ": " << endl;
 	// TODO: accept input for the new element in the array
-
+	read(temp[count]);
 	count++;
 	cout << "==========\n" << endl;
 
