@@ -1,0 +1,10 @@
+
+In line number 38 of your output:
+The output should be:
+The cheapest phone costs $719.99.
+But your output is: 
+The cheapest phone costs $719.99
+                                ^
+--------------------------------|
+Professor's character ASCII code: hex(2e), dec(46)
+un-matched character ASCII code: hex(d), dec(13)

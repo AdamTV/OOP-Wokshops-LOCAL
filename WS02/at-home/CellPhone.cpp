@@ -19,7 +19,7 @@ namespace sict {
 	void display(const CellPhone phone[], int count) {
 		double cheap = 100000;
 			cout << "------------------------------" << endl
-			<< "Phones available at the mall :" << endl
+			<< "Phones available at the mall:" << endl
 			<< "------------------------------" << endl;
 		for (int i = 0; i < count; i++) {
 			cout << i + 1 << ". ";
@@ -28,7 +28,7 @@ namespace sict {
 			cheap = phone[i].m_price;
 		}
 		cout << "------------------------------" << endl
-			 << " The cheapest phone costs $" << cheap << endl
+			 << "The cheapest phone costs $" << cheap << "." << endl
 			 << "------------------------------" << endl;
 	}
 }
