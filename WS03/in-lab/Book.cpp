@@ -38,7 +38,7 @@ namespace sict {
 			cout << "The book object is empty!" << endl;
 		}
 		else {
-			cout << "Author:" << lastName << ", " << firstName << endl;
+			cout << "Author: " << lastName << ", " << firstName << endl;
 			cout << "Title: " << title << endl;
 			cout << "ISBN-13: " << ISBN << endl;
 		}	
