@@ -7,19 +7,18 @@
 #ifndef SICT_BOOK_H
 #define SICT_BOOK_H
 
-#define MAX_TITLE_SIZE 32	//PUT IN NAMESPACE???
-#define MAX_NAME_SIZE 16
-#define MIN_ISBN_VALUE 1000000000000
-#define MAX_ISBN_VALUE 9999999999999
-
 namespace sict {
+	const int max_title_size = 32;
+	const int max_name_size = 16;
+	const long long min_isbn_value = 1000000000000LL;
+	const long long max_isbn_value = 9999999999999LL;
 	class Book {
-		char lastName[MAX_NAME_SIZE];
-		char firstName[MAX_NAME_SIZE];
-		long ISBN;
-		char title[MAX_TITLE_SIZE];
+		char lastName[max_name_size +1];
+		char firstName[max_name_size +1];
+		long long ISBN;
+		char title[max_title_size +1];
 	public:
-		void set(const char[MAX_NAME_SIZE],const char[MAX_NAME_SIZE],const char[MAX_TITLE_SIZE], long ISBN);
+		void set(const char*,const char*,const char*,long long);
 		bool isEmpty() const;
 		void display() const;
 	};
