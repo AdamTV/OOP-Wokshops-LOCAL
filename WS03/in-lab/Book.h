@@ -16,9 +16,10 @@ namespace sict {
 	class Book {
 		char lastName[MAX_NAME_SIZE];
 		char firstName[MAX_NAME_SIZE];
-		double ISBN;
+		long ISBN;
+		char title[MAX_TITLE_SIZE];
 	public:
-		void set(char firstName, char lastName, char title, int ISBN);
+		void set(const char[MAX_NAME_SIZE],const char[MAX_NAME_SIZE],const char[MAX_TITLE_SIZE], long ISBN);
 		bool isEmpty() const;
 		void display() const;
 	};
