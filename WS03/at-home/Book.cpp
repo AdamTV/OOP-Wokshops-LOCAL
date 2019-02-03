@@ -7,22 +7,23 @@
 
 #include <iostream>
 #include <cstring>
+#include <iomanip>
 #include "Book.h"
 
 using namespace std;
 
 namespace sict {
-	void Book::set(const char* firstName_n,const char* lastName_n,const char* title_n,long long ISBN_n) {
+	void Book::set(const char* firstName_n, const char* lastName_n, const char* title_n, long long ISBN_n) {
 		ISBN = ISBN_n;
-		int digits[isbn_size];
+		int digits[isbn_size] = { 0 };
 		long long tmpISBN = ISBN_n;
-		for (int i = 0; i < isbn_size; i++) {
+		for (int i = (isbn_size - 1); i >= 0; i--) {	//break ISBN into array to check if valid
 			int digit = tmpISBN % 10;
 			digits[i] = digit;
 			tmpISBN /= 10;
 		}
 		int oddDigits = 0;
-		for (int i = 0; i < isbn_size; i += 2)
+		for (int i = 0; i < (isbn_size - 2); i += 2)
 			oddDigits += digits[i];
 		int evenDigits = 0;
 		for (int i = 1; i < isbn_size; i += 2)
@@ -31,12 +32,11 @@ namespace sict {
 		int evenOdd = evenDigits + oddDigits;
 		int mod10 = evenOdd % 10;
 		int subtract = 10 - mod10;
-		int add = subtract + evenOdd;
-
-		if (add / 10 == digits[isbn_size - 1] && ISBN_n > min_isbn_value && ISBN_n < max_isbn_value) {
+		//ISBN check 
+		if (subtract == digits[isbn_size - 1] && ISBN_n > min_isbn_value && ISBN_n < max_isbn_value) {
 			strncpy(firstName, firstName_n, max_name_size);
 			firstName[max_name_size] = '\0';
- 			strncpy(lastName, lastName_n, max_name_size);
+			strncpy(lastName, lastName_n, max_name_size);
 			lastName[max_name_size] = '\0';
 			strncpy(title, title_n, max_title_size);
 			title[max_title_size] = '\0';
@@ -53,19 +53,49 @@ namespace sict {
 	bool Book::isEmpty() const {
 		bool check;
 		if (ISBN == 0)
-		check = true;
+			check = true;
 		else
-		 check = false;
+			check = false;
 		return check;
 	}
 	void Book::display(bool check) const {
-		if (isEmpty()) {
+		if (check == false && isEmpty())
 			cout << "The book object is empty!" << endl;
+		else if (check == true && isEmpty()) {
+			cout << "|";
+			cout.width(92);
+			cout.setf(ios::left);
+			cout << "The book object is empty!";
+			cout.unsetf(ios::left);
+			cout << "|" << endl;
 		}
-		else {
+		else if (check == false && isEmpty() == false) {
 			cout << "Author: " << lastName << ", " << firstName << endl;
 			cout << "Title: " << title << endl;
 			cout << "ISBN-13: " << ISBN << endl;
-		}	
+		}
+		else if (check == true && isEmpty() == false) {
+			cout << "|";
+			cout.setf(ios::right);
+			cout.width(max_name_size);
+			cout << lastName << "|";
+			cout.width(max_name_size);
+			cout << firstName << "|";
+			cout.unsetf(ios::right);
+			cout.setf(ios::left);
+			cout.width(max_title_size);
+			cout << title << "|";
+			cout.unsetf(ios::left);
+			cout.setf(ios::right);
+			cout.width(13);
+			cout << ISBN << "|";
+			cout.width(4);
+			cout << year << "|";
+			cout.width(6);
+			std::cout << std::fixed;
+			std::cout << std::setprecision(2);
+			cout << price << "|" << endl;
+			cout.unsetf(ios::right);
+		}
 	}
 }
