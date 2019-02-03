@@ -73,6 +73,8 @@ namespace sict {
 			cout << "Author: " << lastName << ", " << firstName << endl;
 			cout << "Title: " << title << endl;
 			cout << "ISBN-13: " << ISBN << endl;
+			cout << "Publication Year: " << year << endl;
+			cout << "Price: " << price << endl;
 		}
 		else if (check == true && isEmpty() == false) {
 			cout << "|";
