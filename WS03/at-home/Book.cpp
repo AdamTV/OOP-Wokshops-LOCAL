@@ -92,9 +92,11 @@ namespace sict {
 			cout.width(4);
 			cout << year << "|";
 			cout.width(6);
-			std::cout << std::fixed;
-			std::cout << std::setprecision(2);
+			cout.setf(ios::fixed);
+			cout.precision(2);
 			cout << price << "|" << endl;
+			cout.unsetf(ios::fixed);
+			cout.precision(6);
 			cout.unsetf(ios::right);
 		}
 	}
