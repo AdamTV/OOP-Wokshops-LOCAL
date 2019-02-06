@@ -31,9 +31,6 @@ namespace sict {
 			firstName[0] = '\0';
 		}
 	}
-	Traveler::~Traveler() {
-
-	}
     // TODO: implement isEmpty query here
 	bool Traveler::isEmpty() const {
 		bool check;

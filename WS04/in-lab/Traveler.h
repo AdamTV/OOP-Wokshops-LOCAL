@@ -22,10 +22,8 @@ namespace sict {
 		char lastName[max_name_size + 1];
 		char destination[max_destination_size + 1];
 	public:
-		//void copy(char*, char*);
 		Traveler();
 		Traveler(char*, char*, char*);
-		~Traveler();
 		bool isEmpty() const;
 		void display() const;
 	};
