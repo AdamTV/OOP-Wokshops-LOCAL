@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 // TODO: add file header comments here
 // Workshop:	4
 // Name:		ADAM STINZIANI
@@ -14,13 +15,16 @@ using namespace std;
 
 // TODO: continue your namespace here
 namespace sict {
+	void Traveler::set(char*, char*, char*, int, int, int) {
+
+	}
 
 	// TODO: implement the default constructor here
 	Traveler::Traveler() {
 		firstName[0] = '\0';	//SAFE EMPTY STATE
 	}
     // TODO: implement the constructor with 3 parameters here
-	Traveler::Traveler(char frst[], char last[], char dest[]) {
+	Traveler::Traveler(char* frst, char* last, char* dest) {
 		bool valid = frst != nullptr && last != nullptr && dest != nullptr && frst[0] != '\0' && last[0] != '\0' && dest[0] != '\0';
 		if (valid) {
 			strncpy(firstName, frst, max_name_size);
@@ -30,6 +34,9 @@ namespace sict {
 		else {
 			firstName[0] = '\0';
 		}
+	}
+	Traveler::Traveler(char* frst, char* last, char* dest, int year, int month, int day) {
+
 	}
     // TODO: implement isEmpty query here
 	bool Traveler::isEmpty() const {

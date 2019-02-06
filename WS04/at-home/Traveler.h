@@ -21,9 +21,14 @@ namespace sict {
 		char firstName[max_name_size + 1];
 		char lastName[max_name_size + 1];
 		char destination[max_destination_size + 1];
+		int flightYear;
+		int flightMonth;
+		int flightDay;
 	public:
+		void set(char*, char*, char*, int, int, int);
 		Traveler();
-		Traveler(char[], char[], char[]);
+		Traveler(char*, char*, char*);
+		Traveler(char*, char*, char*, int, int, int);
 		bool isEmpty() const;
 		void display() const;
 	};
