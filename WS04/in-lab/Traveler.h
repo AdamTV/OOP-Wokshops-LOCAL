@@ -23,7 +23,7 @@ namespace sict {
 		char destination[max_destination_size + 1];
 	public:
 		Traveler();
-		Traveler(char[], char[], char[]);
+		Traveler(const char[], const char[], const char[]);
 		bool isEmpty() const;
 		void display() const;
 	};

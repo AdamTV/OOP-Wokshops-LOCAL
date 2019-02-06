@@ -20,7 +20,7 @@ namespace sict {
 		firstName[0] = '\0';	//SAFE EMPTY STATE
 	}
     // TODO: implement the constructor with 3 parameters here
-	Traveler::Traveler(char frst[], char last[], char dest[]) {
+	Traveler::Traveler(const char frst[], const  char last[], const  char dest[]) {
 		bool valid = frst != nullptr && last != nullptr && dest != nullptr && frst[0] != '\0' && last[0] != '\0' && dest[0] != '\0';
 		if (valid) {
 			strncpy(firstName, frst, max_name_size);
