@@ -21,9 +21,13 @@ namespace sict {
 		char firstName[max_name_size + 1];
 		char lastName[max_name_size + 1];
 		char destination[max_destination_size + 1];
+	public:
+		//void copy(char*, char*);
 		Traveler();
 		Traveler(char*, char*, char*);
 		~Traveler();
+		bool isEmpty() const;
+		void display() const;
 	};
 }
 #endif // !SICT_TRAVELER_H
