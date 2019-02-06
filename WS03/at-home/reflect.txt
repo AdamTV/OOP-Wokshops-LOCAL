@@ -1,0 +1,14 @@
+REFLECTION
+I selected the long long type for isbn because the value of a long long is at
+least 64 bits.
+I would put validation logic in a constructor to avoid changing anything to the
+Book::set function if an update to the validation logic was necessary.
+The thing that took me the most time was the validation logic for the isbn.
+It was difficult to implement my logic especially because I had a hard time
+understanding what I was trying to implement.
+
+QUIZ 3 REFLECTION
+The question I got wrong asked if the compiler does not insert an empty-body no
+argument constructor into a class definition that declares any form of
+constructor. I said this was false but it is true, the compiler does no such
+thing.
