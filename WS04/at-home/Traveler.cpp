@@ -65,7 +65,7 @@ namespace sict {
 		}
 		else
 		{
-			cout << firstName << " " << lastName << " goes to " << destination <<
+			cout << lastName << ", " << firstName << " goes to " << destination <<
 				" on " << flightYear << "/";
 			cout.fill('0');
 			cout.width(2);
