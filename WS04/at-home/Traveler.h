@@ -31,6 +31,8 @@ namespace sict {
 		Traveler(char*, char*, char*, int, int, int);
 		bool isEmpty() const;
 		void display() const;
+		const char* name() const;
+		bool canTravelWith(const Traveler&) const;
 	};
 }
 #endif // !SICT_TRAVELER_H

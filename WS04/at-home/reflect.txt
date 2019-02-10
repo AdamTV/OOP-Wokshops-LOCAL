@@ -1,0 +1,15 @@
+Week 4
+Reflect.txt
+By: Adam Stinziani
+In this workshop I have learned how to reuse code in 2 different ways.
+1. Calling default constructor on *this to set a safe empty state.
+2. Using a set function to only set all the values  of the passed arguments to
+the current object while keeping validation logic in constructors.
+
+A safe empty state is/are (a) value(s) that is/are used by member functions to
+check the state of an object. The safe empty state cannot be redefined and is
+used to ensure proper functionality of functions.
+
+The canTravelWith() function can access the private data of the object
+referenced in it's parameter because all member functions can access private
+data members of the same class.
