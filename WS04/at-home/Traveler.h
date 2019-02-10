@@ -25,10 +25,10 @@ namespace sict {
 		int flightMonth;
 		int flightDay;
 	public:
-		void set(char*, char*, char*, int, int, int);
+		void set(const char[], const char[], const char[], int, int, int);
 		Traveler();
-		Traveler(char*, char*, char*);
-		Traveler(char*, char*, char*, int, int, int);
+		Traveler(const char[], const char[], const char[]);
+		Traveler(const char[], const char[], const char[], int, int, int);
 		bool isEmpty() const;
 		void display() const;
 		const char* name() const;

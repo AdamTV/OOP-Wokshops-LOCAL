@@ -15,7 +15,7 @@ using namespace std;
 
 // TODO: continue your namespace here
 namespace sict {
-	void Traveler::set(char* frst, char* last, char* dest, int year, int month, int day) {
+	void Traveler::set(const char frst[], const char last[], const char dest[], int year, int month, int day) {
 		strncpy(firstName, frst, max_name_size);
 		strncpy(lastName, last, max_name_size);
 		strncpy(destination, dest, max_destination_size);
@@ -28,7 +28,7 @@ namespace sict {
 		flightYear = 0;
 	}
 	// TODO: implement the constructor with 3 parameters here
-	Traveler::Traveler(char* frst, char* last, char* dest) {
+	Traveler::Traveler(const char frst[], const char last[], const char dest[]) {
 		bool valid = frst != nullptr && last != nullptr && dest != nullptr && frst[0] != '\0' && last[0] != '\0' && dest[0] != '\0';
 		if (valid) {
 			set(frst, last, dest, 2019, 7, 1);
@@ -37,7 +37,7 @@ namespace sict {
 			*this = Traveler();
 		}
 	}
-	Traveler::Traveler(char* frst, char* last, char* dest, int year, int month, int day) {
+	Traveler::Traveler(const char frst[], const char last[], const char dest[], int year, int month, int day) {
 		bool valid = year >= 2019 && year <= 2022 && month >= 1 && month <= 12 && day >= 1 && day <= 31;
 		if (valid) {
 			*this = Traveler(frst, last, dest);
