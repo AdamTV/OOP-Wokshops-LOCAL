@@ -20,8 +20,11 @@ namespace sict {
 	// TODO: implement the two-argument constructor
 	Fraction::Fraction(int a_, int b_) {
 		if (a_ >= 0 && b_ > 0) {
-			a = a_;
-			b = b_;
+			Fraction ab;
+			ab.a = a_, ab.b = b_;
+			ab.reduce();
+			a = ab.a;
+			b = ab.b;
 		}
 		else {
 			*this = Fraction();
@@ -93,7 +96,7 @@ namespace sict {
 			int ad = a * rhs.b;
 			int bc = b * rhs.a;
 			int bd = b * rhs.b;
-			result.a = ad = bc;
+			result.a = ad + bc;
 			result.b = bd;
 			result.reduce();
 		}
