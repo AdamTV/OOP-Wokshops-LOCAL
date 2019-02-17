@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include "Fraction.h"
+
 using namespace sict;
 using namespace std;
 
