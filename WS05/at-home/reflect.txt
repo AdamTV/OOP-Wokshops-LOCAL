@@ -1,0 +1,11 @@
+WORKSHOP 5 REFLECTION
+The operator+ returns a Fraction object because it only calculates the sum of 2
+fractions. It does not need to return a reference to an object because unlike
+the operator+=, + does not reassign a value to an existing object, and only
+needs to return a copy.
+I included a bothEmpty function that accepted an unmodifiable reference to a
+Fraction object as a parameter and reused my functions multiple times to
+minimize code duplication.
+
+QUIZ REFLECTION
+N/A
