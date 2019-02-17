@@ -25,10 +25,15 @@ namespace sict {
 		// TODO: declare public member functions
 		void display() const;
 		bool isEmpty() const;
+		bool bothEmpty(const Fraction& rhs) const;
 		Fraction();
 		Fraction(int, int);
 		// TODO: declare the + operator overload
 		Fraction operator+(const Fraction& rhs) const;
+		Fraction operator*(const Fraction&) const;
+		bool operator==(const Fraction&) const;
+		bool operator!=(const Fraction&) const;
+		Fraction operator+=(const Fraction&);
 	};
 }
 #endif // !0SICT_FRACTION_H

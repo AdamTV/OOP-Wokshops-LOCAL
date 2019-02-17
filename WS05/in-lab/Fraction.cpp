@@ -86,10 +86,16 @@ namespace sict {
 			valid = true;
 		return valid;
 	}
+	bool Fraction::bothEmpty(const Fraction& rhs) const {
+		bool valid = false;
+		if (isEmpty() && rhs.isEmpty())
+			valid = true;
+		return valid;
+	}
 	// TODO: implement the + operator
 	Fraction Fraction::operator+(const Fraction& rhs) const {
 		Fraction result;
-		if (isEmpty() || rhs.isEmpty()) {
+		if (bothEmpty(rhs)) {
 			result = Fraction();
 		}
 		else {
@@ -101,5 +107,45 @@ namespace sict {
 			result.reduce();
 		}
 		return result;
+	}
+	Fraction Fraction::operator*(const Fraction& rhs) const {
+		Fraction result;
+		if (bothEmpty(rhs)) {
+			result = Fraction();
+		}
+		else {
+			int ac = a * rhs.a;
+			int bd = b * rhs.b;
+			result.a = ac;
+			result.b = bd;
+			result.reduce();
+		}
+		return result;
+	}
+	bool Fraction::operator==(const Fraction& rhs) const {
+		bool end;
+		bool valid = rhs.a == a && rhs.b == b;
+		if (valid && !bothEmpty(rhs))
+			end = true;
+		else
+			end = false;
+		return end;
+	}
+	bool Fraction::operator!=(const Fraction& rhs) const {
+		bool valid;
+		if (rhs == *this)
+			valid = false;
+		else if (bothEmpty(rhs))
+			valid = false;
+		else
+			valid = true;
+		return valid;
+	}
+	Fraction Fraction::operator+=(const Fraction& rhs) {
+		if (!bothEmpty(rhs))
+			*this = *this + rhs;
+		else
+			*this = Fraction();
+		return *this;
 	}
 }
