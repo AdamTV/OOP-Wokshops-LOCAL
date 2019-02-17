@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{7F0D484D-DA45-4CEE-8AD7-4F2172761E87}</ProjectGuid>
-    <RootNamespace>WS05HOME</RootNamespace>
+    <ProjectGuid>{B6C74534-6A27-4C62-B4D7-C553674E232A}</ProjectGuid>
+    <RootNamespace>Project1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,13 +115,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\in-lab\Fraction.h">
-      <DeploymentContent>true</DeploymentContent>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\in-lab\Fraction.cpp" />
-    <ClCompile Include="..\..\w5_at_home.cpp" />
+    <ClCompile Include="Fraction.h" />
+    <ClCompile Include="Fraction.cpp" />
+    <ClCompile Include="w5_at_home.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
