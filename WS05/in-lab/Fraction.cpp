@@ -141,7 +141,7 @@ namespace sict {
 			valid = true;
 		return valid;
 	}
-	Fraction Fraction::operator+=(const Fraction& rhs) {
+	Fraction& Fraction::operator+=(const Fraction& rhs) {
 		if (!bothEmpty(rhs))
 			*this = *this + rhs;
 		else

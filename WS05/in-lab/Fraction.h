@@ -33,7 +33,7 @@ namespace sict {
 		Fraction operator*(const Fraction&) const;
 		bool operator==(const Fraction&) const;
 		bool operator!=(const Fraction&) const;
-		Fraction operator+=(const Fraction&);
+		Fraction& operator+=(const Fraction&);
 	};
 }
 #endif // !0SICT_FRACTION_H
