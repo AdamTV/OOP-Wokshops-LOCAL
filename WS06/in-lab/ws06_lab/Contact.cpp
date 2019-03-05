@@ -84,6 +84,13 @@ namespace sict {
 	void Contact::displayNumber(long long number) const {
 		int* nums;
 		nums = breakNumber(number);
+		/*cout << "(+";
+		if (number > twoDigCode) {
+			cout << nums[0];
+		}
+		cout << nums[1] << ") " << nums[2] <<
+			nums[3] << nums[4] << " " << nums[5] << nums[6] << nums[7]
+			<< "-" << nums[8] << nums[9] << nums[10] << nums[11] << endl;*/
 		if (number > twoDigCode)
 			cout << "(+" << nums[0] << nums[1] << ") " << nums[2] <<
 			nums[3] << nums[4] << " " << nums[5] << nums[6] << nums[7]
