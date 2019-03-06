@@ -17,7 +17,7 @@ namespace sict {
 		if (count == 0)
 			numbersStored = count;
 		if (name != nullptr && name[0] != '\0')
-			strncpy(fullName, name, max_name_size - 1);
+			strncpy(fullName, name, max_name_size);
 		else
 			*this = Contact();
 		numbersStored = 0;
@@ -80,7 +80,7 @@ namespace sict {
 			numbers = new long long[count];
 			numbers[count - 1] = number;
 		}
-	
+	}
 	void Contact::displayNumber(long long number) const {
 		int* nums;
 		nums = breakNumber(number);
@@ -100,6 +100,7 @@ namespace sict {
 			nums[4] << " " << nums[5] << nums[6] << nums[7] << "-" <<
 			nums[8] << nums[9] << nums[10] << nums[11] << endl;
 	}
+
 	int* Contact::breakNumber(long long number) const {
 		long long tmpNumber = number;
 		int nums[max_number_size];
