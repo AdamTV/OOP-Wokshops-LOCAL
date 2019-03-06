@@ -109,6 +109,7 @@ namespace sict {
 			nums[i] = digit;
 			tmpNumber /= 10;
 		}
-		return nums;
+		int * nums_n = nums;
+		return nums_n;
 	}
 }
