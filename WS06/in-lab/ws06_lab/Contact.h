@@ -14,7 +14,6 @@ namespace sict {
 	const long long maxPhoneNumber = 1000000000000;
 	class Contact {
 		char fullName[max_name_size];
-		//long long number[max_number_size + 1];
 		long long* numbers = nullptr;
 		int numbersStored;
 		bool emptyState;
