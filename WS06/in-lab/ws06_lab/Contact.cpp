@@ -14,8 +14,13 @@ namespace sict {
 		emptyState = true;
 	}
 	Contact::Contact(const char* name, const long long nums[], int count) {
-			strncpy(fullName, name, max_name_size);
-			numbersStored = 0;
+		if(name != nullptr && name[0] != '\0'){
+		strncpy(fullName, name, max_name_size);
+		emptyState = false;
+		}
+		else
+		*this = Contact();
+		numbersStored = 0;
 		for (int i = 0; i < count; i++) {
 			if (checkNumber(nums[i])) {
 				numbersStored++;

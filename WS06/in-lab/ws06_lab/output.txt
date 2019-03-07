@@ -1,4 +1,4 @@
-Script started on Wed 06 Mar 2019 04:39:11 PM EST
+Script started on Wed 06 Mar 2019 09:07:05 PM EST
 [38;5;9mBegin Testing the Program!
 --------------------------[0m
 
@@ -18,7 +18,7 @@ Empty contact!
 ----------------------------------------
 Testing the constructor with parameters!
 ----------------------------------------
-Empty contact!
+A very long nam
 ----------------------------------------
 
 ----------------------------------------
@@ -35,4 +35,4 @@ John Doe
 [38;5;9m------------------------
 End Testing the Program![0m
 
-Script done on Wed 06 Mar 2019 04:39:11 PM EST
+Script done on Wed 06 Mar 2019 09:07:05 PM EST
