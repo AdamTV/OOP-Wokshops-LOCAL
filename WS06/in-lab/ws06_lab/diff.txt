@@ -1,10 +1,10 @@
 
-In line number 21 of your output:
+In line number 14 of your output:
 The output should be:
-A very long nam
-But your output is: 
 Empty contact!
+But your output is: 
+ s[ÄY
 ^
 |
-Professor's character ASCII code: hex(41), dec(65)
-un-matched character ASCII code: hex(45), dec(69)
+Professor's character ASCII code: hex(45), dec(69)
+un-matched character ASCII code: hex(ffffffa0), dec(-96)
