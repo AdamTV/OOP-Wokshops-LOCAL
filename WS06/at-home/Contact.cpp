@@ -14,17 +14,12 @@ namespace sict {
 		emptyState = true;
 	}
 	Contact::Contact(const char* name, const long long nums[], int count) {
-<<<<<<< HEAD
+		if (count == 0)
+			numbersStored = count;
 		if (name != nullptr && name[0] != '\0')
-			strncpy(fullName, name, max_name_size);
-=======
-		if(name != nullptr && name[0] != '\0'){
-		strncpy(fullName, name, max_name_size);
-		emptyState = false;
-		}
->>>>>>> fb9c65a4e6844be9e5d837174fd4c51e56a533b8
+			strncpy(fullName, name, max_name_size - 1);
 		else
-		*this = Contact();
+			*this = Contact();
 		numbersStored = 0;
 		for (int i = 0; i < count; i++) {
 			if (checkNumber(nums[i])) {
@@ -95,7 +90,7 @@ namespace sict {
 		}
 		cout << nums[1] << ") " << nums[2] <<
 			nums[3] << nums[4] << " " << nums[5] << nums[6] << nums[7]
-			<< "-" << nums[8] << nums[9] << nums[10] << nums[11] << endl; //DOESNT WORK???*/
+			<< "-" << nums[8] << nums[9] << nums[10] << nums[11] << endl;*/
 		if (number > twoDigCode)
 			cout << "(+" << nums[0] << nums[1] << ") " << nums[2] <<
 			nums[3] << nums[4] << " " << nums[5] << nums[6] << nums[7]
@@ -105,7 +100,6 @@ namespace sict {
 			nums[4] << " " << nums[5] << nums[6] << nums[7] << "-" <<
 			nums[8] << nums[9] << nums[10] << nums[11] << endl;
 	}
-
 	int* Contact::breakNumber(long long number) const {
 		long long tmpNumber = number;
 		int nums[max_number_size];
@@ -114,7 +108,6 @@ namespace sict {
 			nums[i] = digit;
 			tmpNumber /= 10;
 		}
-		int * nums_n = nums;
-		return nums_n;
+		return nums;
 	}
 }

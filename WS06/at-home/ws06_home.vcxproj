@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{99C20B1C-8C58-4190-9C0F-4BD4D8355C61}</ProjectGuid>
-    <RootNamespace>ws06lab</RootNamespace>
+    <ProjectGuid>{E4DB63C5-1720-47B1-B8C8-7DEC6621CC39}</ProjectGuid>
+    <RootNamespace>ws06home</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,11 +115,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Contact.cpp" />
-    <ClCompile Include="w6_in_lab.cpp" />
+    <ClInclude Include="Contact.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Contact.h" />
+    <ClCompile Include="Contact.cpp" />
+    <ClCompile Include="w6_at_home.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
