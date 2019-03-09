@@ -5,10 +5,10 @@
 // File:		Contact.h
 #ifndef SICT_CONTACT_H
 #define SICT_CONTACT_H
-#endif // !SICT_CONTACT_H
+
 
 namespace sict {
-	const int max_name_size = 15;
+	const int max_name_size = 16;
 	const int max_number_size = 12;
 	const long long twoDigCode = 100000000000;
 	const long long maxPhoneNumber = 1000000000000;
@@ -19,8 +19,11 @@ namespace sict {
 		bool emptyState;
 	public:
 		Contact();
-		Contact(const char* name,const long long nums[], int count);
+		Contact(const char* name, const long long nums[], int count);
 		~Contact();
+		Contact(const Contact&);
+		Contact& operator=(const Contact&);
+		Contact& operator+=(long long);
 		bool isEmpty() const;
 		void display() const;
 		bool checkNumber(long long);
@@ -29,3 +32,4 @@ namespace sict {
 		int* breakNumber(long long) const;
 	};
 }
+#endif // !SICT_CONTACT_H

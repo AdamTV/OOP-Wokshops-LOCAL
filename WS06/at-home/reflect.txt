@@ -1,0 +1,23 @@
+WORKSHOP 6 REFLECT.TXT BY: ADAM STINZIANI
+
+1. The copy assignment operator checks for self-assignment because if we are
+trying to assign an object to itself, we will end up deleting the current
+objects own dynamic memory and then try assigning it back to itself after it's
+just been deleted which will cause an error.
+
+2. We must assign resource instance variables to nullptr in the copy constructor
+before calling the copy-assignment operator to ensure the copy-assignment
+operator does not delete any allocated memory if called by the copy constructor.
+
+3. The code won't compile if the copy constructor's parameter is sent-by-value.
+Passing an unmodifiable reference to the copy constructor ensures we are not
+copying the object (for efficiency) and not modifying it's data (for security).
+
+I think the most important thing I learnt from this workshop is that when we
+introduce the copy assignment operator, it overloads the assignment operator
+which changes it's meaning if we've already used it in our code. I initially
+tried calling my 3 argument constructor (which uses the '=' operator) in the
+operator itself which cased an infinite loop.
+
+QUIZ 6 REFLECTION
+N/A
