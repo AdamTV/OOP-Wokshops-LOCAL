@@ -14,15 +14,10 @@ namespace sict {
 		emptyState = true;
 	}
 	Contact::Contact(const char* name, const long long nums[], int count) {
-<<<<<<< HEAD
-		if (name != nullptr && name[0] != '\0')
-			strncpy(fullName, name, max_name_size);
-=======
 		if(name != nullptr && name[0] != '\0'){
 		strncpy(fullName, name, max_name_size);
 		emptyState = false;
 		}
->>>>>>> fb9c65a4e6844be9e5d837174fd4c51e56a533b8
 		else
 		*this = Contact();
 		numbersStored = 0;
