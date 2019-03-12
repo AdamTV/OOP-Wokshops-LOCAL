@@ -15,7 +15,6 @@ namespace sict {
 		int health;
 		int strength;
 	public:
-		Hero();
 		Hero(const char*, int, int);
 		bool emptyState;
 		void operator-=(int attack);

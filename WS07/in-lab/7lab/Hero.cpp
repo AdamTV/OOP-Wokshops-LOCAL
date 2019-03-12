@@ -6,13 +6,9 @@
 // File:		Hero.cpp
 
 #include <cstring>
-#include <iostream>
 #include "Hero.h"
 
 namespace sict {
-	Hero::Hero() {
-		emptyState = true;
-	}
 	Hero::Hero(const char * name, int hp, int ap) {
 		bool valid = hp > 0 && ap > 0;
 		if (valid) {
