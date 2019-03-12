@@ -22,7 +22,6 @@ namespace sict {
 		bool isAlive() const;
 		int attackStrength() const;
 		friend std::ostream& operator<<(std::ostream& os, const Hero& hero);
-		//const Hero& operator=(const Hero& rhs);
 	};
 
 	const Hero& operator*(const Hero& first, const Hero& second);

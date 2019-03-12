@@ -27,7 +27,7 @@ namespace sict {
 	void Hero::operator-=(int attack) {
 		if (attack > 0) {
 			health -= attack;
-			if (health  < 0)
+			if (health < 0)
 				health = 0;
 		}
 	}
@@ -53,31 +53,27 @@ namespace sict {
 	const Hero& operator*(const Hero& first, const Hero& second) {
 		std::cout << "Ancient Battle! " << first << " vs " << second << " : ";
 		Hero first_n = first, second_n = second;
-		const Hero& winner = first;
+		const Hero* winner;
+		int win = 1;
 		bool won = false;
 		int i;
 		for (i = 0; i < max_rounds && !won; i++) {
 			first_n -= second.attackStrength();
 			second_n -= first.attackStrength();
 			if (!first_n.isAlive()) {
-				winner = second;
+				win = 2;
 				won = true;
 			}
-			if(!second_n.isAlive()) {
-				winner = first;
+			if (!second_n.isAlive()) {
 				won = true;
 			}
 		}
-		if (!won)
-			winner = first;
-		std::cout << "Winner is " << winner << " in " << i << " rounds." << std::endl;
-		return winner;
+		if (win == 1)
+			winner = &first;
+		else
+			winner = &second;
+		const Hero& theWinner = *winner;
+		std::cout << "Winner is " << theWinner << " in " << i << " rounds." << std::endl;
+		return theWinner;
 	}
-	/*const Hero& Hero::operator=(const Hero& rhs) {
-		emptyState = rhs.emptyState;
-		strncpy(fullName, rhs.fullName, max_name_size);
-		health = rhs.health;
-		strength = rhs.strength;
-		return *this;
-	}*/
 }
