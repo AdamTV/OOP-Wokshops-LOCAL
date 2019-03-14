@@ -1,0 +1,17 @@
+WORKSHOP 7 REFLECTION BY: ADAM STINZIANI
+
+1. The Hero class does not need to know about the SuperHero class because it is
+the base class.
+2. The SuperHero class does need to know about the Hero class because it is the
+derived class.
+3. When a SuperHero fought a Hero it printed out "Ancient Battle!". I think it
+used the Hero * Hero operator because even though I did not define a Hero *
+SuperHero operator, all SuperHeros are Heros and can therefore use the Hero
+operator.
+
+In this workshop I learned the value of early binding, dynamic dispatch and
+overriding dynamic dispatch with early binding. I also learned that public
+member functions of derived classes cannot access private data members of their
+base class.
+
+QUIZ 7 REFLECTION N/A

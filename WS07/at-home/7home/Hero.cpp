@@ -54,8 +54,8 @@ namespace sict {
 		bool won = false;
 		int i;
 		for (i = 0; i < max_rounds && !won; i++) {
-			first_n -= second.attackStrength();
-			second_n -= first.attackStrength();
+			first_n -= second.Hero::attackStrength();
+			second_n -= first.Hero::attackStrength();
 			if (!first_n.isAlive()) {
 				win = 2;
 				won = true;

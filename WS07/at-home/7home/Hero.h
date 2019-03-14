@@ -14,12 +14,12 @@ namespace sict {
 		char fullName[max_name_size];
 		int health;
 		int strength;
+		bool emptyState;
 	public:
 		Hero(const char*, int, int);
-		bool emptyState;
 		void operator-=(int attack);
 		bool isAlive() const;
-		int attackStrength() const;
+		virtual int attackStrength() const;
 		friend std::ostream& operator<<(std::ostream& os, const Hero& hero);
 	};
 
