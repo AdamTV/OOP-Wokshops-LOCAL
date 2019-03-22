@@ -39,7 +39,7 @@ namespace sict {
 	void ChequingAccount::display(std::ostream& out) const {
 		out.setf(std::ios::fixed);
 		out.precision(2);
-		out << "Account type: Chequing\n Balance: $" << balance()
+		out << "Account type: Chequing\nBalance: $" << balance()
 			<< "\nPer Transaction Fee: " << useFee << "\nMonthly Fee: " <<
 			monthFee << std::endl;
 	}
