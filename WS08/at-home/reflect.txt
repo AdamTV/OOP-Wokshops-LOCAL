@@ -1,0 +1,24 @@
+WORKSHOP 8 REFLECTION BY: ADAM STINZIANI
+
+An abstract base class contains or inherits at least one pure virtual
+function. For this reason abstract base classes are instantiable.
+In contrast, concrete classes contain implementations and can be instantiated.
+
+ The main module can work with all of the accounts because it accesses them
+ through the CreateAccount function that is in the Allocator module, which
+ contains the header files for the accounts.
+
+ The destructor is necessary in the interface because this ensures that the
+ most derived class's destructor will get called first which in turn ensures
+ all of the destructors in the hierarchy will be called when an object is
+ deleted.
+
+ Overloading occurs when multiple functions within a derived and base class
+ share the same identifier. Shadowing occurs when a derived function with the
+ same signature is called instead of the base. Overriding occurs when a derived
+ class uses scope resolution to specify from which class it wants to execute an
+ overloaded method.
+
+ QUIZ 8 REFLECTION
+ 2. The purpose of a constrained cast is to convert a variable from one data
+ type to another to get code to work that would not have in the first place.
