@@ -46,6 +46,7 @@ namespace sict {
 		highest = max(violentCrimeRate, n);
 		cout << "The Minimum Violent Crime rate was " << setprecision(0) << lowest 
 			<< "\nThe Maximum Violent Crime rate was "
-			<< highest << setprecision(6); cout.unsetf(ios::fixed); cout.unsetf(ios::right);
+			<< highest << endl << setprecision(6);
+		cout.unsetf(ios::fixed); cout.unsetf(ios::right);
 	}
 }

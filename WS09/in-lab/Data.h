@@ -9,6 +9,7 @@
 #ifndef SICT_DATA_H
 #define SICT_DATA_H
 
+#include <cstring>
 #include<iomanip>
 #include <iostream>
 
