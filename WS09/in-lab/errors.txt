@@ -1,0 +1,10 @@
+In file included from Data.cpp:11:0:
+Data.h: In function ‘bool sict::readRow(std::istream&, const char*, T*, int)’:
+Data.h:108:8: error: ‘strcmp’ is not a member of ‘std’
+    if (std::strcmp(rowname, name) != 0) {
+        ^
+In file included from w9_lab_prof.cpp:12:0:
+Data.h: In function ‘bool sict::readRow(std::istream&, const char*, T*, int)’:
+Data.h:108:8: error: ‘strcmp’ is not a member of ‘std’
+    if (std::strcmp(rowname, name) != 0) {
+        ^
