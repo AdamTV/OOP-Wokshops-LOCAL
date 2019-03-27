@@ -45,6 +45,7 @@ void close(iAccount* acct[], int n) {
 }
 
 int main () {
+	cin.ignore(2000, '\n');
 	// Create Accounts for Angelina
 	iAccount* Angelina[2];
     
