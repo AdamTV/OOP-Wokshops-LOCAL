@@ -1,4 +1,4 @@
-Script started on Wed 27 Mar 2019 12:37:16 PM EDT
+Script started on Mon 01 Apr 2019 06:51:42 PM EDT
 [38;5;9mBegin Testing the Program!
 --------------------------[0m
 
@@ -18,4 +18,4 @@ The Maximum Violent Crime rate was 506
 [38;5;9m------------------------
 End Testing the Program![0m
 
-Script done on Wed 27 Mar 2019 12:37:16 PM EDT
+Script done on Mon 01 Apr 2019 06:51:42 PM EDT
