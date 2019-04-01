@@ -1,0 +1,14 @@
+1. Source code will not compile if the definition for a template is in Data.cpp
+
+2. Template declarations are only permitted at global, namespace, or class
+scope & a function must be declared before it is called.
+
+3. I could have done the lab with overloading functions but this would have
+involved duplicating a lot of code. The advantage of templates is to avoid
+code duplication.
+
+4. template<class T> makes a template for a class and typename for a function
+but can be used interchangeably.
+
+5. I have learned that templates are a type of parametric polymorphism which is
+a type of universal polymorphism.
