@@ -82,7 +82,13 @@ namespace sict {
 
 	// display inserts n items of data into std::cout
 	//
-
+	template<typename T>
+	void display(const char* name, const T* data, int n) {
+		cout << right << setw(20) << name;
+		for (int i = 0; i < n; i++)
+			cout << setw(15) << data[i];
+		cout << endl;
+	}
 	template<typename T>
 	bool readRow(std::istream& input, const char* name, T* data, int n) {
 		char rowname[2000];

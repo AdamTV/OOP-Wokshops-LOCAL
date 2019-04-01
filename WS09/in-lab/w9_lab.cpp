@@ -85,13 +85,7 @@ int main() {
     display("GrandTheftAuto", grandTheftAuto, n);
     display("GrandTheftAutoRate", grandTheftAutoRate, n);
     cout << endl;
-	template<typename T>
-	void display(const char* name, const T* data, int n) {
-		cout << right << setw(20) << name;
-		for (int i = 0; i < n; i++)
-			cout << setw(15) << data[i];
-		cout << endl;
-	}
+
     // Answer the validation questions
 	answers(year, population, violentCrime, violentCrimeRate, grandTheftAuto, n);
     
